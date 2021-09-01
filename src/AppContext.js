@@ -18,7 +18,7 @@ export const AppContextProvider = ({ children }) => {
       };
     
       const logoutUser = () => {
-        history.push("http://localhost:3000/sign-in");
+        history.push("/sign-in");
         setUsername("");
       };
     
