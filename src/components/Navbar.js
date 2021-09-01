@@ -14,7 +14,7 @@ class Navbar extends React.Component {
   render() {
 
   return (
-    <AppContext>
+    <AppContext.Consumer>
       {context => (
  <nav className="navbar navbar-expand-lg navbar-light fixed-top">
  <div className="container">
@@ -59,7 +59,7 @@ class Navbar extends React.Component {
          </div>
        </nav>
       )}
-    </AppContext>
+    </AppContext.Consumer>
     )
   }
 }
