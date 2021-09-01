@@ -1,7 +1,7 @@
 import { createDate } from "./date"
 
 const USERS_KEY = "users";
-const USER_KEY = "user";
+export const USER_KEY = "user";
 const USER_EMAIL = "user-email";
 const USER_TIMESTAMP = "timestamp"
 
