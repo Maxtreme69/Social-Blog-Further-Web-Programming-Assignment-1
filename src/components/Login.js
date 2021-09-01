@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { verifyUser } from "../data/repository";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useAppContext } from "../AppContext";
 
-function Login(props) {
+function Login() {
+    const history = useHistory();
+    const context = useAppContext();
     const [fields, setFields ] = useState({ username: "", password: "" });
     const [errorMessage, setErrorMessage] = useState(null);
 
@@ -20,9 +23,9 @@ function Login(props) {
         // if verified login the user
         if (verified === true) {
             // props.loginUser(fields.username);
-
+            context.setUsername(fields.username);
             // navigate to the home page.
-            props.history.push("/");
+            history.push("/");
             // console.log("You are verified!!");
             // window.location.href="http://localhost:3000";
             return;

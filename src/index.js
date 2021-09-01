@@ -4,14 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { initUsers } from "./data/repository";
+import { AppContextProvider } from "./AppContext";
 
 // Initialize local storage data
 initUsers();
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
-    document.getElementById("root")
+  <BrowserRouter>
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
-

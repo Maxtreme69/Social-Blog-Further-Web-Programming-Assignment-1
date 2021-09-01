@@ -1,6 +1,5 @@
 import React from "react";
 import avatar from '../images/profile-picture.svg';
-import Modal from '../modal/Modal';
 import { removeUser } from "../data/repository"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
